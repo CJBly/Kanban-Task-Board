@@ -1,0 +1,51 @@
+.column{
+    border-radius: 1.5rem;
+    border: 1px solid var(--border);
+    background: rgba(17, 24, 45, 0.8);
+    padding: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.over{
+    border-color: var(--brand);
+    box-shadow: var(--shadow-glow);
+}
+.columnHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.columnTitle{
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    color: var(--muted);
+}
+.countTasks{
+    border-radius: 999px;
+    background: var(--soft);
+    color: var(--muted);
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
+}
+.taskList{
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.emptyList{
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 1rem;
+    border: 1px dashed var(--border);
+    background: rgba(26, 36, 64, 0.4);
+    color: var(--muted);
+    padding: 1rem;
+    font-size: 1rem;
+}

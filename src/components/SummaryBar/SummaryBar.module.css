@@ -1,0 +1,30 @@
+.summaryGrid{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 1rem;
+}
+.summaryRow{
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    background: rgba(17, 24, 45, 0.7);
+    padding: 1rem 1.25rem;
+    min-height: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.label{
+    margin: 0;
+    color: var(--muted);
+    font-size: 1rem;
+}
+.value{
+    margin: 0.35rem 0 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+@media (max-width:900px){
+    .summaryGrid{
+        grid-template-columns: 1fr;
+    }
+}
