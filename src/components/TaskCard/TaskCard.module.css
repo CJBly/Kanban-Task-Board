@@ -1,0 +1,96 @@
+.card{
+    cursor: grab;
+    border-radius: 1.25rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    background: var(--soft);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+.card:hover{
+    border-color: rgba(124, 155, 255, 0.5);
+    box-shadow: var(--shadow-glow);
+}
+.dragging{
+    opacity:0.7;
+}
+.header{
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+.title{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.description{
+    margin: 0.55rem 0 0;
+    color: var(--muted);
+    font-size: .9rem;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.details{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.priority_container,
+.priority_determination,
+.due,
+.dueOverdue,
+.dueSoon{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 999px;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.75rem;
+}
+.priorityLow{
+    background: rgba(56, 189, 248, 0.15);
+    color: #bae6fd;
+}
+.priorityHigh{
+    background: rgba(100, 116, 139, 0.2);
+    color: #e2e8f0;
+}
+.priorityNormal{
+    background: rgba(251, 113, 133, 0.15);
+    color: #fecdd3;
+}
+.due{
+    background: var(--panel);
+    color: var(--muted);
+}
+.dueSoon{
+    background: rgba(245,158,11,0.15);
+    color: #fde68a;
+}
+.dueOverdue{
+    background: rgba(251,113,133,0.15);
+    color: #fecdd3;
+}
+.delete_button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    border-radius: .75rem;
+    padding: .35rem;
+}
+.delete_button:hover{
+    color: var(--danger);
+    background: rgba(251, 113, 133, 0.15);
+}
