@@ -1,0 +1,100 @@
+.overlay{
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+}
+.menu{
+    width: 100%;
+    max-width: 560px;
+    border-radius: 2rem;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    padding: 2.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+.heading{
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.subheading{
+    margin: 0.75rem 0 0;
+    color: var(--muted);
+    font-size: 1rem;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+.fieldGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+.label{
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+.input,.text_area,.select{
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    background: var(--soft);
+    color: var(--text);
+    padding: 0.9rem 1rem;
+    outline: none;
+}
+.text_area{
+    resize: vertical;
+    min-height: 120px;
+}
+.row{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.input:focus, .text_area:focus, .select:focus{
+    border-color: var(--brand);
+}
+.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .75rem;
+    padding-top: 0.25rem;
+}
+.primaryButton, .secondaryButton{
+    border-radius: 1rem;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, filter 0.15s ease, background 0.15s ease;
+}
+.primaryButton{
+    border: none;
+    background: var(--brand);
+    color: white;
+    font-weight: 600;
+}
+.secondaryButton{
+    border: 1px solid var(--border);
+    background: var(--danger);
+    color: white;
+    font-weight: 600;
+}
+.secondaryButton:hover{
+    background: var(--soft);
+}
+@media (min-width: 775px){
+    .row{
+        grid-template-columns: 1fr 1fr;
+    }
+}
